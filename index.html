@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة بلوكس فروت المتصفح</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- استدعاء مكتبة Three.js للرسوميات ثلاثية الأبعاد -->
+    <script src="https://cloudflare.com"></script>
+</head>
+<body>
+    <!-- واجهة المستخدم (UI) فوق اللعبة -->
+    <div id="ui-container">
+        <div class="stat-box">المستوى: <span id="level">1</span></div>
+        <div class="stat-box">المال (Beli): $<span id="beli">100</span></div>
+        <div class="stat-box">الفاكهة الحالية: <span id="fruit">لا يوجد</span></div>
+        
+        <!-- شريط الصحة والخبرة -->
+        <div class="bar-container">
+            <div class="bar-label">الصحة (HP)</div>
+            <div class="bar"><div id="hp-bar" style="width: 100%; background: #ff4d4d;"></div></div>
+        </div>
+        <div class="bar-container">
+            <div class="bar-label">الخبرة (XP)</div>
+            <div class="bar"><div id="xp-bar" style="width: 0%; background: #4da6ff;"></div></div>
+        </div>
+    </div>
+
+    <div id="instructions">تحرك بالأسهم أو WASD | اضغط [Space] للضرب واكتساب XP</div>
+
+    <!-- سكريبت تشغيل اللعبة -->
+    <script src="game.js"></script>
+</body>
+</html>
